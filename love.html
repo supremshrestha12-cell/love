@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposal Page</title>
+  <style>
+    body {
+      background-color: #fffdd0; /* cream color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
 
+    p {
+      font-size: 28px;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    a button, input[type="button"] {
+      font-size: 20px;
+      padding: 15px 40px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    a button {
+      background-color: pink;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: gray;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+    <img src="C:\Users\supre\OneDrive\Documents\love\OIP.webp">
+  <p>Will You Marry Me 💝💝</p>
+  <div class="buttons">
+    <!-- YES button goes to another page -->
+    <a href="iloveyou.html">
+      <button>Yes, Of course</button>
+    </a>
+
+    <!-- NO button runs away -->
+    <input type="button" value="No" id="noBtn">
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.floor(Math.random() * (window.innerWidth - 150));
+      const y = Math.floor(Math.random() * (window.innerHeight - 70));
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+  </script>
+</body>
+</html>
